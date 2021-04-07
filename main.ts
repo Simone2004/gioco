@@ -1,5 +1,59 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    Hero.vy = -100
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    Hero,
+    [img`
+        . . . . f f f f f . f f f . 
+        . . . f f c c c c f f f f f 
+        . . f c c c c c c b f f f f 
+        . . f c c c c c c 3 c f f f 
+        . f c c c c c c c c 3 3 f . 
+        . f c c 4 c c c c c f f f . 
+        . f f e 4 4 c c c f f f f . 
+        . f f e 4 4 f b f 4 4 f f . 
+        . . f f d d f 1 4 d 4 f . . 
+        . . . f d d d d 4 f f f . . 
+        . . . f e 4 4 4 e e f . . . 
+        . . . f 3 3 3 e d d 4 . . . 
+        . . . f 3 3 3 e d d e . . . 
+        . . . f 6 6 6 f e e f . . . 
+        . . . . f f f f f f . . . . 
+        . . . . . . f f f . . . . . 
+        `],
+    100,
+    true
+    )
+})
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    animation.runImageAnimation(
+    Hero,
+    [img`
+        . f f f . f f f f f . . . . 
+        f f f f f c c c c f f . . . 
+        f f f f b c c c c c c f . . 
+        f f f c 3 c c c c c c f . . 
+        . f 3 3 c c c c c c c c f . 
+        . f f f c c c c c 4 c c f . 
+        . f f f f c c c 4 4 e f f . 
+        . f f 4 4 f b f 4 4 e f f . 
+        . . f 4 d 4 1 f d d f f . . 
+        . . f f f 4 d d d d f . . . 
+        . . . f e e 4 4 4 e f . . . 
+        . . . 4 d d e 3 3 3 f . . . 
+        . . . e d d e 3 3 3 f . . . 
+        . . . f e e f 6 6 6 f . . . 
+        . . . . f f f f f f . . . . 
+        . . . . . f f f . . . . . . 
+        `],
+    100,
+    true
+    )
+})
+let Hero: Sprite = null
 scene.setBackgroundColor(9)
-let Hero = sprites.create(img`
+Hero = sprites.create(img`
     . f f f . f f f f f . . . . 
     f f f f f c c c c f f . . . 
     f f f f b c c c c c c f . . 
@@ -17,5 +71,7 @@ let Hero = sprites.create(img`
     . . . . f f f f f f . . . . 
     . . . . . f f f . . . . . . 
     `, SpriteKind.Player)
-controller.moveSprite(Hero)
+controller.moveSprite(Hero, 100, 0)
 tiles.setTilemap(tilemap`level1`)
+scene.cameraFollowSprite(Hero)
+Hero.ay = 200
