@@ -1,0 +1,18 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="qK0BV5~n{=t..9S;ZRN2">Player</variable><variable type="KIND_SpriteKind" id="EGv^NZDvexXM!OhANhF@">Projectile</variable><variable type="KIND_SpriteKind" id="i#Mp[q1?AKwrw@mj^f@N">Food</variable><variable type="KIND_SpriteKind" id="/]emAz6M|wnLcpMnna{Q">Enemy</variable><variable id="#R-T5(ja|qm~2cVe{hAE">mySprite</variable><variable id="$,Nc8dMN64paovO.OrN2">Hero</variable></variables><block type="pxt-on-start" id="iVak3S0cMK[v.wyp9P64" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundcolor" id="*Vh?x?mHKEvH!;@5sq]n"><value name="color"><shadow type="colorindexpicker" id="|DFdxA)IYmZVqlFZT2Af"><field name="index">9</field></shadow></value><next><block type="variables_set" id="3uQVwh}_6d-uTc0IA*5f"><field name="VAR" id="$,Nc8dMN64paovO.OrN2">Hero</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="8=e!vk/!tIirXuKhcRs."><value name="img"><shadow type="screen_image_picker" id="u#_U7+?THG?jqTVFG.v4"><field name="img">img`
+. f f f . f f f f f . . . . 
+f f f f f c c c c f f . . . 
+f f f f b c c c c c c f . . 
+f f f c 3 c c c c c c f . . 
+. f 3 3 c c c c c c c c f . 
+. f f f c c c c c 4 c c f . 
+. f f f f c c c 4 4 e f f . 
+. f f 4 4 f b f 4 4 e f f . 
+. . f 4 d 4 1 f d d f f . . 
+. . f f f 4 d d d d f . . . 
+. . . f e e 4 4 4 e f . . . 
+. . . 4 d d e 3 3 3 f . . . 
+. . . e d d e 3 3 3 f . . . 
+. . . f e e f 6 6 6 f . . . 
+. . . . f f f f f f . . . . 
+. . . . . f f f . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"u#_U7+?THG?jqTVFG.v4"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="2z;@Ohc_6ZyW`;EHKI0p"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="(_1f=UpfWdYixf{`$FnQ"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="jV/e_ftWLpU8.Nswj|8="><field name="VAR" id="$,Nc8dMN64paovO.OrN2">Hero</field></block></value><next><block type="tilemap_editor" id="W|:_zb9W0!3gd6LbBD!s"><field name="tilemap">tilemap`level1`</field><data>{"commentRefs":[],"fieldData":{"tilemap":"level1"}}</data></block></next></block></next></block></next></block></statement></block></xml>
